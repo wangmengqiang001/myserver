@@ -163,7 +163,8 @@ public class TomcatPlugin extends Plugin {
 		else if (TOMCAT_90.equals(id))
 			return new Tomcat90Handler();
 		else
-			return null;
+			return new Tomcat85Handler();
+			//return null;
 	}
 
 	/**
