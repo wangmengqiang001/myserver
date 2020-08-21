@@ -38,7 +38,7 @@
       <image
          id="org.eclipse.jst.server.tomcat.85"
          icon="icons/obj16/tomcat.gif"
-         typeIds="org.eclipse.jst.server.tomcat.runtime.85"/>
+         typeIds="org.eclipse.jst.server.tomcat.runtimes.report.85"/>
       <image
          id="org.eclipse.jst.server.tomcat.90"
          icon="icons/obj16/tomcat.gif"
@@ -79,7 +79,7 @@
       <image
          id="org.eclipse.jst.server.tomcat.85"
          icon="icons/obj16/tomcat.gif"
-         typeIds="org.eclipse.jst.server.tomcat.85"/>
+         typeIds="org.eclipse.jst.server.report.tomcat.85,org.eclipse.jst.server.tomcat.runtimes.report.85"/>
       <image
          id="org.eclipse.jst.server.tomcat.90"
          icon="icons/obj16/tomcat.gif"
@@ -89,7 +89,7 @@
    <extension point="org.eclipse.core.expressions.propertyTesters">
       <propertyTester
          id="org.eclipse.jst.server.tomcat.ui.propertyTester"
-         namespace="org.eclipse.jst.server.tomcat.ui"
+         namespace="org.eclipse.jst.server.tomcat.report.ui"
          properties="hasConfiguration"
          type="java.lang.Object"
          class="org.eclipse.jst.server.tomcat.ui.internal.ConfigurationPropertyTester">
@@ -101,10 +101,13 @@
          id="org.eclipse.jst.server.tomcat.configuration.editor.webmodule"
          order="20"
          name="%configurationEditorWebModulesPage"
-         typeIds="org.eclipse.jst.server.tomcat.*"
+         typeIds="org.eclipse.jst.server.report.tomcat.*"
          class="org.eclipse.jst.server.tomcat.ui.internal.editor.ConfigurationWebModuleEditorPart">
          <enablement>
-           <test property="org.eclipse.jst.server.tomcat.ui.hasConfiguration" value="true"/>
+           <test
+                 forcePluginActivation="false"
+                 property="org.eclipse.jst.server.tomcat.report.ui.hasConfiguration"
+                 value="true"/>
          </enablement>
       </page>
    </extension>
@@ -114,29 +117,29 @@
          id="org.eclipse.jst.server.tomcat.server.editor.instance"
          order="0"
          insertionId="org.eclipse.wst.server.editor.overview.left"
-         typeIds="org.eclipse.jst.server.tomcat.*"
+         typeIds="org.eclipse.jst.server.report.tomcat.*"
          class="org.eclipse.jst.server.tomcat.ui.internal.editor.ServerLocationEditorSection"/>
       <section
          id="org.eclipse.jst.server.tomcat.server.editor.general"
          order="5"
          insertionId="org.eclipse.wst.server.editor.overview.left"
-         typeIds="org.eclipse.jst.server.tomcat.*"
+         typeIds="org.eclipse.jst.server.report.tomcat.*"
          class="org.eclipse.jst.server.tomcat.ui.internal.editor.ServerGeneralEditorSection"/>
       <section
          id="org.eclipse.jst.server.tomcat.configuration.editor.port"
          order="10"
          insertionId="org.eclipse.wst.server.editor.overview.right"
-         typeIds="org.eclipse.jst.server.tomcat.*"
+         typeIds="org.eclipse.jst.server.report.tomcat.*"
          class="org.eclipse.jst.server.tomcat.ui.internal.editor.ConfigurationPortEditorSection">
          <enablement>
-           <test property="org.eclipse.jst.server.tomcat.ui.hasConfiguration" value="true"/>
+           <test property="org.eclipse.jst.server.tomcat.report.ui.hasConfiguration" value="true"/>
          </enablement>
       </section>
       <section
          id="org.eclipse.jst.server.tomcat.configuration.editor.mime"
          order="20"
          insertionId="org.eclipse.wst.server.editor.overview.right"
-         typeIds="org.eclipse.jst.server.tomcat.*"
+         typeIds="org.eclipse.jst.server.tomcat.reportexclude.*"
          class="org.eclipse.jst.server.tomcat.ui.internal.editor.ConfigurationMimeEditorSection">
          <enablement>
            <test property="org.eclipse.jst.server.tomcat.ui.hasConfiguration" value="true"/>
@@ -145,46 +148,12 @@
    </extension>
    
    <extension point="org.eclipse.wst.server.ui.wizardFragments">
+      
       <fragment
-         id="org.eclipse.jst.server.tomcat.runtime.32"
-         typeIds="org.eclipse.jst.server.tomcat.runtime.32"
+         id="org.eclipse.jst.server.tomcat.report.runtimes.85"
+         typeIds="org.eclipse.jst.server.tomcat.runtimes.report.85"
          class="org.eclipse.jst.server.tomcat.ui.internal.TomcatRuntimeWizardFragment"/>
-      <fragment
-         id="org.eclipse.jst.server.tomcat.runtime.40"
-         typeIds="org.eclipse.jst.server.tomcat.runtime.40"
-         class="org.eclipse.jst.server.tomcat.ui.internal.TomcatRuntimeWizardFragment"/>
-      <fragment
-         id="org.eclipse.jst.server.tomcat.runtime.41"
-         typeIds="org.eclipse.jst.server.tomcat.runtime.41"
-         class="org.eclipse.jst.server.tomcat.ui.internal.TomcatRuntimeWizardFragment"/>
-      <fragment
-         id="org.eclipse.jst.server.tomcat.runtime.50"
-         typeIds="org.eclipse.jst.server.tomcat.runtime.50"
-         class="org.eclipse.jst.server.tomcat.ui.internal.TomcatRuntimeWizardFragment"/>
-      <fragment
-         id="org.eclipse.jst.server.tomcat.runtime.55"
-         typeIds="org.eclipse.jst.server.tomcat.runtime.55"
-         class="org.eclipse.jst.server.tomcat.ui.internal.TomcatRuntimeWizardFragment"/>
-      <fragment
-         id="org.eclipse.jst.server.tomcat.runtime.60"
-         typeIds="org.eclipse.jst.server.tomcat.runtime.60"
-         class="org.eclipse.jst.server.tomcat.ui.internal.TomcatRuntimeWizardFragment"/>
-      <fragment
-         id="org.eclipse.jst.server.tomcat.runtime.70"
-         typeIds="org.eclipse.jst.server.tomcat.runtime.70"
-         class="org.eclipse.jst.server.tomcat.ui.internal.TomcatRuntimeWizardFragment"/>
-      <fragment
-         id="org.eclipse.jst.server.tomcat.runtime.80"
-         typeIds="org.eclipse.jst.server.tomcat.runtime.80"
-         class="org.eclipse.jst.server.tomcat.ui.internal.TomcatRuntimeWizardFragment"/>
-      <fragment
-         id="org.eclipse.jst.server.tomcat.runtime.85"
-         typeIds="org.eclipse.jst.server.tomcat.runtime.85"
-         class="org.eclipse.jst.server.tomcat.ui.internal.TomcatRuntimeWizardFragment"/>
-      <fragment
-         id="org.eclipse.jst.server.tomcat.runtime.90"
-         typeIds="org.eclipse.jst.server.tomcat.runtime.90"
-         class="org.eclipse.jst.server.tomcat.ui.internal.TomcatRuntimeWizardFragment"/>
+     
    </extension>
 
   <extension point="org.eclipse.debug.ui.launchConfigurationTypeImages">
@@ -198,7 +167,7 @@
   <extension point="org.eclipse.debug.ui.launchConfigurationTabGroups">
     <launchConfigurationTabGroup
       id="org.eclipse.jst.server.tomcat.ui.launchConfigurationTabGroup"
-      type="org.eclipse.jst.server.tomcat.core.launchConfigurationType"
+      type="org.eclipse.jst.server.report.tomcat.core.launchConfigurationType"
       class="org.eclipse.jst.server.tomcat.ui.internal.TomcatLaunchConfigurationTabGroup">
     </launchConfigurationTabGroup>
   </extension>
@@ -222,7 +191,7 @@
       id="org.eclipse.jst.server.tomcat.ui.serveractions"
       objectClass="org.eclipse.wst.server.core.IServer">
       <visibility>
-          <objectState name="serverType" value="org.eclipse.jst.server.tomcat.*"/>
+          <objectState name="serverType" value="org.eclipse.jst.server.report.tomcat.*"/>
       </visibility>
       <action 
         class="org.eclipse.jst.server.tomcat.ui.internal.actions.CleanWorkDirAction"
@@ -237,7 +206,7 @@
       objectClass="org.eclipse.wst.server.ui.internal.view.servers.ModuleServer">
       <visibility>
         <and>
-          <objectState name="serverType" value="org.eclipse.jst.server.tomcat.*"/>
+          <objectState name="serverType" value="org.eclipse.jst.server.report.tomcat.*"/>
           <objectState name="moduleType" value="jst.web"/>
         </and>
       </visibility>
@@ -249,14 +218,15 @@
       </action>
     </objectContribution>
   </extension>
-
+ 
   <extension point="org.eclipse.wst.server.core.publishers">
      <publisher
-        id="org.eclipse.jst.server.tomcat.ui.context"
-        typeIds="org.eclipse.jst.server.tomcat.*"
+        id="org.eclipse.jst.server.tomcat.report.ui.context"
+        typeIds="org.eclipse.jst.server.report.tomcat.*"
         name="%publisherContextFixLabel"
         description="%publisherContextFixDescription"
-        order=""
+        order="1"
         class="org.eclipse.jst.server.tomcat.ui.internal.ContextPublisherDelegate"/>
   </extension>
+ 
 </plugin>
