@@ -79,7 +79,7 @@
       <image
          id="org.eclipse.jst.server.tomcat.85"
          icon="icons/obj16/tomcat.gif"
-         typeIds="org.eclipse.jst.server.tomcat.report.85,org.eclipse.jst.server.tomcat.runtimes.report.85"/>
+         typeIds="org.eclipse.jst.server.report.tomcat.85,org.eclipse.jst.server.tomcat.runtimes.report.85"/>
       <image
          id="org.eclipse.jst.server.tomcat.90"
          icon="icons/obj16/tomcat.gif"
@@ -101,7 +101,7 @@
          id="org.eclipse.jst.server.tomcat.configuration.editor.webmodule"
          order="20"
          name="%configurationEditorWebModulesPage"
-         typeIds="org.eclipse.jst.server.tomcat.report.*"
+         typeIds="org.eclipse.jst.server.report.tomcat.*"
          class="org.crossbridge.jst.server.report.ui.internal.editor.ConfigurationWebModuleEditorPart">
          <enablement>
            <test
@@ -117,19 +117,19 @@
          id="org.eclipse.jst.server.tomcat.server.editor.instance"
          order="0"
          insertionId="org.eclipse.wst.server.editor.overview.left"
-         typeIds="org.eclipse.jst.server.tomcat.report.*"
+         typeIds="org.eclipse.jst.server.report.tomcat.*"
          class="org.crossbridge.jst.server.report.ui.internal.editor.ServerLocationEditorSection"/>
       <section
          id="org.eclipse.jst.server.tomcat.server.editor.general"
          order="5"
          insertionId="org.eclipse.wst.server.editor.overview.left"
-         typeIds="org.eclipse.jst.server.tomcat.report.*"
+         typeIds="org.eclipse.jst.server.report.tomcat.*"
          class="org.crossbridge.jst.server.report.ui.internal.editor.ServerGeneralEditorSection"/>
       <section
          id="org.eclipse.jst.server.tomcat.configuration.editor.port"
          order="10"
          insertionId="org.eclipse.wst.server.editor.overview.right"
-         typeIds="org.eclipse.jst.server.tomcat.report.*"
+         typeIds="org.eclipse.jst.server.report.tomcat.*"
          class="org.crossbridge.jst.server.report.ui.internal.editor.ConfigurationPortEditorSection">
          <enablement>
            <test property="org.eclipse.jst.server.tomcat.report.ui.hasConfiguration" value="true"/>
@@ -191,7 +191,7 @@
       id="org.eclipse.jst.server.tomcat.ui.serveractions"
       objectClass="org.eclipse.wst.server.core.IServer">
       <visibility>
-          <objectState name="serverType" value="org.eclipse.jst.server.tomcat.report.*"/>
+          <objectState name="serverType" value="org.eclipse.jst.server.report.tomcat.*"/>
       </visibility>
       <action 
         class="org.crossbridge.jst.server.report.ui.internal.actions.CleanWorkDirAction"
@@ -206,7 +206,7 @@
       objectClass="org.eclipse.wst.server.ui.internal.view.servers.ModuleServer">
       <visibility>
         <and>
-          <objectState name="serverType" value="org.eclipse.jst.server.tomcat.report.*"/>
+          <objectState name="serverType" value="org.eclipse.jst.server.report.tomcat.*"/>
           <objectState name="moduleType" value="jst.web"/>
         </and>
       </visibility>
@@ -222,7 +222,7 @@
   <extension point="org.eclipse.wst.server.core.publishers">
      <publisher
         id="org.eclipse.jst.server.tomcat.report.ui.context"
-        typeIds="org.eclipse.jst.server.tomcat.report.*"
+        typeIds="org.eclipse.jst.server.report.tomcat.*"
         name="%publisherContextFixLabel"
         description="%publisherContextFixDescription"
         order="1"

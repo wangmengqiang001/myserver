@@ -37,7 +37,7 @@
 
   <extension point="org.eclipse.wst.server.core.serverTypes">     
      <serverType
-       id="org.eclipse.jst.server.tomcat.report.85"
+       id="org.eclipse.jst.server.report.tomcat.85"
        name="%tomcat85ServerType"
        description="%tomcat85ServerDescription"
        supportsRemoteHosts="false"
@@ -57,7 +57,7 @@
     <serverLocator
        id="org.eclipse.jst.server.tomcat.server.locator"
        supportsRemoteHosts="false"
-       typeIds="org.eclipse.jst.server.tomcat.report.*"
+       typeIds="org.eclipse.jst.server.report.tomcat.*"
        class="org.crossbridge.jst.server.report.core.internal.TomcatServerLocator"/>
   </extension>
 
@@ -65,7 +65,7 @@
      <launchableAdapter
            class="org.crossbridge.jst.server.report.core.internal.TomcatLaunchableAdapterDelegate"
            id="org.eclipse.jst.server.report.tomcat.web"
-           typeIds="org.eclipse.jst.server.tomcat.report.*"/>
+           typeIds="org.eclipse.jst.server.report.tomcat.*"/>
   </extension>
 
   <extension point="org.eclipse.debug.core.sourcePathComputers">
@@ -87,7 +87,7 @@
   <extension point="org.eclipse.wst.server.core.publishTasks">
      <publishTask
         id="org.eclipse.jst.server.report.tomcat.core.publishTask"
-        typeIds="org.eclipse.jst.server.tomcat.report.85"
+        typeIds="org.eclipse.jst.server.report.tomcat.85"
         class="org.crossbridge.jst.server.report.core.internal.PublishTask"/>
   </extension>
 
