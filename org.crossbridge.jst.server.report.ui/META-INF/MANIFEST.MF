@@ -3,12 +3,12 @@ Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: org.crossbridge.jst.server.report.ui;singleton:=true
 Bundle-Version: 1.1.600.qualifier
-Bundle-Activator: org.eclipse.jst.server.tomcat.ui.internal.TomcatUIPlugin
+Bundle-Activator: org.crossbridge.jst.server.report.ui.internal.TomcatUIPlugin
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Export-Package: org.eclipse.jst.server.tomcat.ui.internal;x-internal:=true,
- org.eclipse.jst.server.tomcat.ui.internal.actions;x-internal:=true,
- org.eclipse.jst.server.tomcat.ui.internal.editor;x-internal:=true
+Export-Package: org.crossbridge.jst.server.report.ui.internal;x-internal:=true,
+ org.crossbridge.jst.server.report.ui.internal.actions;x-internal:=true,
+ org.crossbridge.jst.server.report.ui.internal.editor;x-internal:=true
 Require-Bundle: org.eclipse.core.runtime;bundle-version="[3.2.0,4.0.0)",
  org.eclipse.core.resources;bundle-version="[3.2.0,4.0.0)",
  org.eclipse.core.expressions;bundle-version="[3.2.0,4.0.0)",

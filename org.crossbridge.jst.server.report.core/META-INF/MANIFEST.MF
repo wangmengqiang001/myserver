@@ -3,14 +3,14 @@ Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: org.crossbridge.jst.server.report.core;singleton:=true
 Bundle-Version: 1.1.901.qualifier
-Bundle-Activator: org.eclipse.jst.server.tomcat.core.internal.TomcatPlugin
+Bundle-Activator: org.crossbridge.jst.server.report.core.internal.TomcatPlugin
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Export-Package: org.eclipse.jst.server.tomcat.core.internal;x-friends:="org.crossbridge.jst.server.report.ui",
- org.eclipse.jst.server.tomcat.core.internal.command;x-friends:="org.crossbridge.jst.server.report.ui",
- org.eclipse.jst.server.tomcat.core.internal.xml;x-friends:="org.crossbridge.jst.server.report.ui",
- org.eclipse.jst.server.tomcat.core.internal.xml.server32;x-friends:="org.crossbridge.jst.server.report.ui",
- org.eclipse.jst.server.tomcat.core.internal.xml.server40;x-friends:="org.crossbridge.jst.server.report.ui"
+Export-Package: org.crossbridge.jst.server.report.core.internal;x-friends:="org.crossbridge.jst.server.report.ui",
+ org.crossbridge.jst.server.report.core.internal.command;x-friends:="org.crossbridge.jst.server.report.ui",
+ org.crossbridge.jst.server.report.core.internal.xml;x-friends:="org.crossbridge.jst.server.report.ui",
+ org.crossbridge.jst.server.report.core.internal.xml.server32;x-friends:="org.crossbridge.jst.server.report.ui",
+ org.crossbridge.jst.server.report.core.internal.xml.server40;x-friends:="org.crossbridge.jst.server.report.ui"
 Require-Bundle: org.eclipse.core.runtime;bundle-version="[3.2.0,4.0.0)",
  org.eclipse.core.resources;bundle-version="[3.2.0,4.0.0)",
  org.eclipse.core.commands;bundle-version="[3.2.0,4.0.0)",
